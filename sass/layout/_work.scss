@@ -1,0 +1,60 @@
+@use "../base/colors";
+@use "../base/typography";
+@use "../utils/mixins";
+
+.work {
+  /* background-color: red; */
+  margin-bottom: 66px;
+}
+.work-title {
+  color: colors.$color-logo;
+  font-family: typography.$font-family-heading;
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.work-subtitle {
+  color: colors.$color-title;
+  font-family: typography.$font-family-base;
+  font-size: 30px;
+  font-weight: 700;
+  font-variant: all-small-caps;
+}
+.work-line {
+  width: 60px;
+  height: 4px;
+  background-color: colors.$color-active;
+  margin: 0 auto;
+  margin-bottom: 66px;
+}
+.work-list {
+  @include mixins.flex-center(space-between);
+  flex-wrap: wrap;
+  gap: 100px 70px;
+}
+.work-item {
+  display: flex;
+  width: calc((100% - 3 * 70px) / 3);
+}
+.work-image {
+  width: 37px;
+  height: 37px;
+  margin-right: 20px;
+}
+.work-item-title {
+  margin-bottom: 20px;
+  color: colors.$color-title;
+
+  /* uppercase */
+  font-size: 14px;
+  font-weight: 400;
+  font-variant: small-caps;
+}
+.work-text {
+  color: colors.$color-text;
+  font-family: typography.$font-family-second;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px; /* 146.667% */
+}

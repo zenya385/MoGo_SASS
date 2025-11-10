@@ -1,0 +1,9 @@
+@use "../layout/footer";
+@use "../utils/plaseholder";
+
+.about {
+  & > button {
+    @extend %btn;
+    color: black;
+  }
+}

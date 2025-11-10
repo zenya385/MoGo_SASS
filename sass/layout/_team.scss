@@ -1,0 +1,172 @@
+@use "../base/colors" as c;
+@use "../base/typography" as t;
+@use "../utils/mixins";
+
+.team {
+  text-align: center;
+  margin-bottom: 33px;
+  &:hover {
+  }
+}
+.team-title {
+  color: c.$color-title;
+  font-family: t.$font-family-heading;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 17px;
+}
+.team-subtitle {
+  color: c.$color-title;
+  font-size: 30px;
+  font-weight: 700;
+  font-variant: all-small-caps;
+  margin-bottom: 36px;
+}
+.team-line {
+  width: 60px;
+  height: 4px;
+  background-color: c.$color-active;
+  margin: 0 auto;
+  margin-bottom: 45px;
+}
+.team-subsription {
+  color: c.$color-text;
+  font-family: t.$font-family-second;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 66px;
+}
+.team-list {
+  @include mixins.flex-center(center);
+  column-gap: 30px;
+}
+.team-item {
+  padding-bottom: 33px;
+}
+.team-img-wrap:hover .social-list {
+  /*7 ================== варіант 1 ===================== */
+  /* z-index: 5; */
+  /*7 ================== варіант 2 ===================== */
+  /* display: flex; */
+  /*7 ================== варіант 3 ===================== */
+  /* overflow */
+  /*7 ================== варіант 4 ===================== */
+  /* opacity: 1; */
+  /*7 ================== варіант 5 ===================== */
+  visibility: visible;
+}
+
+/*7 ================== варіант 3 ===================== */
+/* .team-item:hover .team-img-wrap {
+  overflow: visible;
+}
+.team-item:hover .social-list {
+  left: 68px;
+} */
+
+/* .team-item:hover .team-img-wrap::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 10px;
+  right: 10px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(239, 139, 138, 0.8) 0%,
+    rgba(229, 207, 130, 0.8) 100%
+  );
+} */
+.team-image {
+}
+.team-image-subtext {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  background-color: c.$color-image-subtext-bg;
+  color: c.$color-image-subtext;
+}
+.team-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-img-wrap:hover::before {
+  @include mixins.bg-gradient(c.$color-bg-gradient-1, c.$color-bg-gradient-2);
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 10px;
+  right: 10px;
+  // background-image: linear-gradient(180deg, #ef8b8acc 0%, #e5cf82cc 100%);
+}
+
+.team-item-title {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  font-variant: all-small-caps;
+  margin-top: 30px;
+}
+
+.team-text {
+  color: c.$color-text;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 11px;
+}
+
+/*3 =============== sociale list ================ */
+
+.social-list {
+  @include mixins.flex-center(center);
+  position: absolute;
+  top: 196px;
+  left: 68px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  gap: 2px;
+  /*7 ================== варіант 1 ===================== */
+  /* z-index: -5; */
+  /*7 ================== варіант 2 ===================== */
+  /* display: none; */
+  /*7 ================== варіант 3 ===================== */
+  /* overflow: hidden; */
+  /* left: -270px; */
+  /*7 ================== варіант 4 ===================== */
+  /* opacity: 0; */
+  /*7 ================== варіант 5 ===================== */
+  visibility: hidden;
+}
+
+.social-item {
+  padding: 15px;
+  background-color: #fce38a;
+  /* border-radius: 50%; */
+}
+.social-item:hover {
+  background-color: #95e1d3;
+}
+.social-link {
+  display: block;
+  margin: 0;
+}
+.social-svg {
+  fill: #f38181;
+}

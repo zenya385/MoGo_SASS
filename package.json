@@ -1,0 +1,21 @@
+{
+  "name": "mogo_sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenya385/MoGo_SASS.git"
+  },
+  "keywords": [],
+  "author": "Roman Zeno <zeno385@gmail.com>",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/zenya385/MoGo_SASS/issues"
+  },
+  "homepage": "https://github.com/zenya385/MoGo_SASS#readme"
+}

@@ -1,0 +1,79 @@
+@use "../base/typography";
+@use "../utils/mixins";
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+img,
+video {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+body {
+  @include mixins.flex-center(space-between);
+  font-family: typography.$font-family-base;
+  line-height: normal;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}

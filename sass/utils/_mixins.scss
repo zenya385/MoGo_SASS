@@ -1,0 +1,9 @@
+@mixin flex-center($just-cont) {
+  display: flex;
+  justify-content: $just-cont;
+  align-items: center;
+}
+
+@mixin bg-gradient($color-1, $color-2) {
+  background: linear-gradient(180deg, $color-1 0%, $color-2 100%);
+}

@@ -1,0 +1,55 @@
+@use "../base/colors";
+@use "../base/typography";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 17px 0;
+  margin-bottom: 68px;
+}
+
+.header-logo {
+  color: colors.$color-logo;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+// .nav {
+// }
+.nav-list {
+  display: flex;
+  column-gap: 55px;
+
+  font-size: 14px;
+  font-weight: 400;
+  color: colors.$color-nav;
+}
+/* .nav-item {
+  margin-right: 55px;
+}
+.nav-item:last-child {
+  margin-right: 0;
+} */
+
+/* .nav-item:not(:last-child) {
+  margin-right: 55px;
+} */
+
+.nav-link {
+}
+
+.nav-item:hover {
+  color: colors.$color-active;
+}
+
+.active::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  margin-top: 10px;
+  background-color: colors.$color-active;
+  border-radius: 30px;
+}
