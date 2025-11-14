@@ -1,55 +1,92 @@
 @use "../base/colors";
 @use "../base/typography";
+@use "../utils/mixins" as m;
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include m.flex-center(center);
 
-  padding: 17px 0;
-  margin-bottom: 68px;
+  margin-bottom: 35px;
+  .header-logo {
+    color: colors.$color-logo;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    .nav {
+      display: flex;
+    }
+    .nav-list {
+      display: flex;
+      column-gap: 25px;
+
+      font-size: 14px;
+      font-weight: 400;
+      color: colors.$color-nav;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+  }
 }
 
-.header-logo {
-  color: colors.$color-logo;
-  font-size: 30px;
-  font-weight: 700;
-}
+// .header {
+// display: flex;
+// justify-content: space-between;
+// align-items: center;
 
-// .nav {
+//   padding: 17px 0;
+//   margin-bottom: 68px;
 // }
-.nav-list {
-  display: flex;
-  column-gap: 55px;
 
-  font-size: 14px;
-  font-weight: 400;
-  color: colors.$color-nav;
-}
-/* .nav-item {
-  margin-right: 55px;
-}
-.nav-item:last-child {
-  margin-right: 0;
-} */
+// .header-logo {
+//   color: colors.$color-logo;
+//   font-size: 30px;
+//   font-weight: 700;
+// }
 
-/* .nav-item:not(:last-child) {
-  margin-right: 55px;
-} */
+// // .nav {
+// // }
+// .nav-list {
+//   display: flex;
+//   column-gap: 55px;
 
-.nav-link {
-}
+//   font-size: 14px;
+//   font-weight: 400;
+//   color: colors.$color-nav;
+// }
+// /* .nav-item {
+//   margin-right: 55px;
+// }
+// .nav-item:last-child {
+//   margin-right: 0;
+// } */
 
-.nav-item:hover {
-  color: colors.$color-active;
-}
+// /* .nav-item:not(:last-child) {
+//   margin-right: 55px;
+// } */
 
-.active::after {
-  content: "";
-  display: block;
-  height: 4px;
-  width: 100%;
-  margin-top: 10px;
-  background-color: colors.$color-active;
-  border-radius: 30px;
-}
+// .nav-link {
+// }
+
+// .nav-item:hover {
+//   color: colors.$color-active;
+// }
+
+// .active::after {
+//   content: "";
+//   display: block;
+//   height: 4px;
+//   width: 100%;
+//   margin-top: 10px;
+//   background-color: colors.$color-active;
+//   border-radius: 30px;
+// }
