@@ -21,11 +21,11 @@
   </head>
   <body>
     <header class="header container">
-      <a href="index.html" class="header-logo">MoGo</a>
+      <a href="#" class="header-logo">MoGo</a>
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">HOME</a>
+            <a href="index.html" class="nav-link active">HOME</a>
           </li>
           <li class="nav-item">
             <a href="about.html" class="nav-link">ABOUT</a>
@@ -34,15 +34,35 @@
             <a href="service.html" class="nav-link">SERVICE</a>
           </li>
           <li class="nav-item">
-            <a href="work.html" class="nav-link active">WORK</a>
+            <a href="work.html" class="nav-link">WORK</a>
           </li>
           <li class="nav-item"><a href="#" class="nav-link">BLOG</a></li>
           <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
         </ul>
       </nav>
+      <svg class="burger-menu" height="40" width="40" data-open-modal-menu>
+        <use href="img/sprite-1.svg#icon-burger-menu"></use>
+      </svg>
     </header>
     <main>
       <h1>Work</h1>
+
+      <h2>Responsive image</h2>
+
+      <section class="responsive-img">
+        <img
+          class="res-img"
+          src="./img/first.jpg"
+          srcset="
+            ./img/desktop/first-man.jpg     1x,
+            ./img/desktop/second-man@2x.jpg 2x,
+            ./img/desktop/third-man@3x.jpg  3x
+          "
+          alt=""
+          width="370"
+          height="480"
+        />
+      </section>
     </main>
     <footer class="footer container">
       <p class="copyright">
@@ -52,5 +72,38 @@
       <input type="text" placeholder="Your Email..." />
       <button type="button">Subscribe</button>
     </footer>
+    <!-- ========== вся розмітка модального (бургер) меню ======================= -->
+    <div class="backdrop is-hidden menu" data-modal-menu>
+      <div class="modal">
+        <div class="wrap-head">
+          <a href="#" class="header-logo">MoGo</a>
+          <svg class="close-btn" width="20" height="20" data-close-modal-menu>
+            <use href="img/sprite-1.svg#close"></use>
+          </svg>
+        </div>
+        <ul class="nav-menu-list">
+          <li class="nav-menu-item">
+            <a href="index.html" class="nav-menu-link active">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-menu-link">ABOUT</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="service.html" class="nav-menu-link">SERVICE</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="work.html" class="nav-menu-link">WORK</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link">BLOG</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script type="module" src="js/modal.js"></script>
+    <script type="module" src="js/modal-menu.js"></script>
   </body>
 </html>

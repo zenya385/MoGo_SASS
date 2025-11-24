@@ -46,6 +46,9 @@
           <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
         </ul>
       </nav>
+      <svg class="burger-menu" height="40" width="40" data-open-modal-menu>
+        <use href="img/sprite-1.svg#icon-burger-menu"></use>
+      </svg>
     </header>
     <main>
       <!-- <section>
@@ -131,7 +134,7 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="team container">
+      <section class="team container">
         <h2 class="team-title">Who we are</h2>
         <h2 class="team-subtitle">Meet our team</h2>
         <hr class="team-line" />
@@ -144,7 +147,7 @@
         <ul class="team-list animate__animated animate__fadeInBottomRight">
           <li class="team-item">
             <div class="team-img-wrap">
-              <img src="img/first-man.jpg" alt="" class="team-image" />
+              <img src="img/first.jpg" alt="" class="team-image" />
               <p class="team-image-subtext">Matthew Dix</p>
               <ul class="social-list">
                 <li class="social-item">
@@ -259,9 +262,9 @@
             <p class="team-text">Developer</p>
           </li>
         </ul>
-      </section> -->
+      </section>
     </main>
-    <!-- <footer class="footer container">
+    <footer class="footer container">
       <p class="copyright">
         © 2016 MoGo free PSD template by
         <span class="copyright-span">Laaqiq</span>
@@ -272,6 +275,39 @@
         </label>
         <button type="button" class="footer-btn">Subscribe</button>
       </form>
-    </footer> -->
+    </footer>
+
+    <!-- ========== вся розмітка модального (бургер) меню ======================= -->
+    <div class="backdrop is-hidden menu" data-modal-menu>
+      <div class="modal">
+        <div class="wrap-head">
+          <a href="#" class="header-logo">MoGo</a>
+          <svg class="close-btn" width="20" height="20" data-close-modal-menu>
+            <use href="img/sprite-1.svg#close"></use>
+          </svg>
+        </div>
+        <ul class="nav-menu-list">
+          <li class="nav-menu-item">
+            <a href="index.html" class="nav-menu-link active">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-menu-link">ABOUT</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="service.html" class="nav-menu-link">SERVICE</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="work.html" class="nav-menu-link">WORK</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link">BLOG</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script type="module" src="js/modal-menu.js"></script>
   </body>
 </html>

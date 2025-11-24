@@ -3,7 +3,8 @@
 @use "../utils/mixins" as m;
 
 .header {
-  @include m.flex-center(center);
+  @include m.flex-center(space-between);
+  // justify-content: space-between;
 
   margin-bottom: 35px;
   .header-logo {
@@ -18,10 +19,13 @@
   }
 
   @media screen and (min-width: 480px) {
+    @include m.flex-center(space-between);
   }
 
   @media screen and (min-width: 768px) {
-    justify-content: space-between;
+    .burger-menu {
+      display: none;
+    }
     .nav {
       display: flex;
     }

@@ -1,0 +1,25 @@
+@use "../utils/plaseholder";
+@use "../layout/header";
+@use "../utils/mixins" as m;
+
+.menu {
+  @extend %modal;
+  .modal {
+    .wrap-head {
+      @extend .header-logo;
+      @include m.flex-center(space-between);
+      margin-bottom: 55px;
+    }
+    .nav-menu-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 10px;
+
+      font-size: 14px;
+      font-weight: 400;
+      color: #95e1d3;
+    }
+  }
+}

@@ -21,14 +21,14 @@
   </head>
   <body>
     <header class="header container">
-      <a href="index.html" class="header-logo">MoGo</a>
+      <a href="#" class="header-logo">MoGo</a>
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">HOME</a>
+            <a href="index.html" class="nav-link active">HOME</a>
           </li>
           <li class="nav-item">
-            <a href="about.html" class="nav-link active">ABOUT</a>
+            <a href="about.html" class="nav-link">ABOUT</a>
           </li>
           <li class="nav-item">
             <a href="service.html" class="nav-link">SERVICE</a>
@@ -40,6 +40,9 @@
           <li class="nav-item"><a href="#" class="nav-link">CONTACT</a></li>
         </ul>
       </nav>
+      <svg class="burger-menu" height="40" width="40" data-open-modal-menu>
+        <use href="img/sprite-1.svg#icon-burger-menu"></use>
+      </svg>
     </header>
     <main>
       <section class="about">
@@ -56,6 +59,39 @@
       <input type="text" placeholder="Your Email..." />
       <button type="button">Subscribe</button>
     </footer>
+
+    <!-- ========== вся розмітка модального (бургер) меню ======================= -->
+    <div class="backdrop is-hidden menu" data-modal-menu>
+      <div class="modal">
+        <div class="wrap-head">
+          <a href="#" class="header-logo">MoGo</a>
+          <svg class="close-btn" width="20" height="20" data-close-modal-menu>
+            <use href="img/sprite-1.svg#close"></use>
+          </svg>
+        </div>
+        <ul class="nav-menu-list">
+          <li class="nav-menu-item">
+            <a href="index.html" class="nav-menu-link active">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-menu-link">ABOUT</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="service.html" class="nav-menu-link">SERVICE</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="work.html" class="nav-menu-link">WORK</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link">BLOG</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <!-- ====================== вся розмітка модалок ================================== -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -75,13 +111,41 @@
           voluptate iure placeat dolores, aliquid ut id consequuntur perferendis
           error? Cumque quam facilis nesciunt porro voluptatum? Sint,
           consectetur possimus! Mollitia perspiciatis, expedita tenetur deleniti
-          error doloribus vitae fugit et esse cum odio quaerat eius quas veniam
-          eligendi repudiandae. Autem, tempora? Cum vitae asperiores inventore
-          laudantium quod nostrum, ducimus, culpa, exercitationem in rem
-          voluptatum! Ut, quis?
         </p>
       </div>
     </div>
-    <script type="module" src="js/main.js"></script>
+    <!-- ========== вся розмітка модального (бургер) меню ======================= -->
+    <div class="backdrop is-hidden menu" data-modal-menu>
+      <div class="modal">
+        <div class="wrap-head">
+          <a href="#" class="header-logo">MoGo</a>
+          <svg class="close-btn" width="20" height="20" data-close-modal-menu>
+            <use href="img/sprite-1.svg#close"></use>
+          </svg>
+        </div>
+        <ul class="nav-menu-list">
+          <li class="nav-menu-item">
+            <a href="index.html" class="nav-menu-link active">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-menu-link">ABOUT</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="service.html" class="nav-menu-link">SERVICE</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="work.html" class="nav-menu-link">WORK</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link">BLOG</a>
+          </li>
+          <li class="nav-menu-item">
+            <a href="#" class="nav-menu-link">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script type="module" src="js/modal.js"></script>
+    <script type="module" src="js/modal-menu.js"></script>
   </body>
 </html>
